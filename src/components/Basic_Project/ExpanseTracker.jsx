@@ -8,7 +8,7 @@ const ExpanseTracker = () => {
     localStorage.setItem("Expanse", JSON.stringify(newExpanse));
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     const loadData = JSON.parse(localStorage.getItem("Expanse"))
     setAllExpanse(loadData);
   }, [])

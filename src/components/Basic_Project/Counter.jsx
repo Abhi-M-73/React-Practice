@@ -7,23 +7,23 @@ const Counter = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const incrementCount = () => {
-       const newCount = count + 1;
-       const updatedHistory = historyCount.slice(0, currentIndex+ 1);
-       setHistoryCount([...updatedHistory, newCount]);
-       setCurrentIndex(currentIndex + 1);
-       setCount(newCount); 
+        const newCount = count + 1;
+        const updatedHistory = historyCount.slice(0, currentIndex + 1);
+        setHistoryCount([...updatedHistory, newCount]);
+        setCurrentIndex(currentIndex + 1);
+        setCount(newCount);
     }
 
     const decrementCount = () => {
         const newCount = count - 1;
-       const updatedHistory = historyCount.slice(0, currentIndex+ 1);
-       setHistoryCount([...updatedHistory, newCount]);
-       setCurrentIndex(currentIndex + 1);
-       setCount(newCount);
+        const updatedHistory = historyCount.slice(0, currentIndex + 1);
+        setHistoryCount([...updatedHistory, newCount]);
+        setCurrentIndex(currentIndex + 1);
+        setCount(newCount);
     }
 
     const undoCount = () => {
-        if (currentIndex > 0){
+        if (currentIndex > 0) {
             const newIndex = currentIndex - 1;
             setCurrentIndex(newIndex);
             setCount(historyCount[newIndex]);
@@ -31,7 +31,7 @@ const Counter = () => {
     }
 
     const redoCount = () => {
-        if (currentIndex < historyCount.length -1){
+        if (currentIndex < historyCount.length - 1) {
             const newIndex = currentIndex + 1;
             setCurrentIndex(newIndex);
             setCount(historyCount[newIndex]);

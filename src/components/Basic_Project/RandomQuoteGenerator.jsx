@@ -14,20 +14,20 @@ const RandomQuoteGenerator = () => {
         "The road to success and the road to failure are almost exactly the same. - Colin R. Davis",
         "Success is not how high you have climbed, but how you make a positive difference to the world. - Roy T. Bennett",
         "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
-      ];
-      
+    ];
 
-      const generateRandomQuote = () => {
-        const randomQuoteNum = Math.floor(Math.random()* quotes.length);
+
+    const generateRandomQuote = () => {
+        const randomQuoteNum = Math.floor(Math.random() * quotes.length);
         setQuote(quotes[randomQuoteNum]);
-      }
+    }
 
     return (
         <div className="flex flex-col items-center justify-center p-10 bg-gray-800 text-white rounded-lg">
             <h1 className="text-4xl font-bold text-indigo-400 mb-8 text-center">
                 Random Quote Generator
             </h1>
-            <button onClick={generateRandomQuote}  className="px-8 py-3 rounded-lg bg-indigo-600 text-lg font-semibold shadow-lg hover:bg-indigo-500 transition duration-300">
+            <button onClick={generateRandomQuote} className="px-8 py-3 rounded-lg bg-indigo-600 text-lg font-semibold shadow-lg hover:bg-indigo-500 transition duration-300">
                 Generate Quote
             </button>
             <div className='h-28 bg-gray-700 p-6 rounded-lg shadow-lg w-full max-w-2xl mt-10'>

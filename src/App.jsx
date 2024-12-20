@@ -4,6 +4,7 @@ import Counter from "./components/Basic_Project/Counter";
 import ExpanseTracker from "./components/Basic_Project/ExpanseTracker";
 import StopWatch from "./components/Basic_Project/StopWatch";
 import RandomQuoteGenerator from "./components/Basic_Project/RandomQuoteGenerator";
+import BlogPost from "./components/Medium_Project/BlogPost";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <Counter /> */}
       {/* <ExpanseTracker /> */}
       {/* <StopWatch /> */}
-      <RandomQuoteGenerator />
+      {/* <RandomQuoteGenerator /> */}
+      <BlogPost />
     </div>
   );
 }

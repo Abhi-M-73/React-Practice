@@ -5,6 +5,9 @@ import ExpanseTracker from "./components/Basic_Project/ExpanseTracker";
 import StopWatch from "./components/Basic_Project/StopWatch";
 import RandomQuoteGenerator from "./components/Basic_Project/RandomQuoteGenerator";
 import BlogPost from "./components/Medium_Project/BlogPost";
+import DragDrop from "./components/Medium_Project/DragDrop";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 function App() {
   return (
@@ -13,7 +16,15 @@ function App() {
       {/* <ExpanseTracker /> */}
       {/* <StopWatch /> */}
       {/* <RandomQuoteGenerator /> */}
-      <BlogPost />
+      {/* <BlogPost /> */}
+
+
+      <DndProvider backend={HTML5Backend}>
+        <DragDrop />
+      </DndProvider>
+
+
+
     </div>
   );
 }
